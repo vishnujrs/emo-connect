@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - EMO</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="logo-container">
+                        <div class="flex items-center">
+                            <div class="logo-image w-12 h-12">
+                                <img src="emo.jpg" alt="EMO Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div class="ml-3">
+                                <span class="block text-lg font-bold text-blue-800">EMO</span>
+                                <span class="block text-xs text-gray-600">Empowering Mobility</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-2xl mx-4">
+            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                <div class="mb-8">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-check-circle text-5xl text-green-500"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Booking Confirmed!</h2>
+                    <p class="text-xl text-gray-600 mb-6">Thank you for choosing EMO for your prosthetic consultation.</p>
+                    <div id="inperson-message" class="text-gray-600 mb-8">
+                        <p>We have sent a confirmation email with your appointment details.</p>
+                        <p class="mt-2">Please arrive 10 minutes before your scheduled time.</p>
+                    </div>
+                    <div id="video-message" class="text-gray-600 mb-8 hidden">
+                        <p>Our team will call you within 24 hours to schedule your video consultation.</p>
+                        <p class="mt-2">Please keep your phone handy and ensure you have a stable internet connection for the video call.</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">What's Next?</h3>
+                    <ul id="inperson-steps" class="space-y-3 text-left">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+                            <span>Check your email for appointment details</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+                            <span>Review the clinic location and directions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-medical text-blue-500 mt-1 mr-3"></i>
+                            <span>Prepare any medical records if available</span>
+                        </li>
+                    </ul>
+                    <ul id="video-steps" class="space-y-3 text-left hidden">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-500 mt-1 mr-3"></i>
+                            <span>Wait for our call to schedule your video consultation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-wifi text-blue-500 mt-1 mr-3"></i>
+                            <span>Ensure you have a stable internet connection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-camera text-blue-500 mt-1 mr-3"></i>
+                            <span>Test your camera and microphone before the consultation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="index.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
+                        Return to Home
+                    </a>
+                    <p class="text-gray-500">Need help? Contact us at support@emo-care.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Check consultation type from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+
+        if (type === 'video') {
+            document.getElementById('inperson-message').classList.add('hidden');
+            document.getElementById('video-message').classList.remove('hidden');
+            document.getElementById('inperson-steps').classList.add('hidden');
+            document.getElementById('video-steps').classList.remove('hidden');
+        }
+    </script>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 EMO - Empowering Mobility & Opportunities. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,167 @@
+/* Custom animations and styles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-container i {
+    animation: pulse 2s infinite;
+}
+
+/* Custom gradients and colors */
+.gradient-tech {
+    background: linear-gradient(120deg, #0EA5E9, #2DD4BF);
+}
+
+/* Custom hover effects */
+.hover-grow {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+}
+
+/* Custom shadows */
+.tech-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.tech-card:hover {
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.2);
+    border-color: rgba(14, 165, 233, 0.2);
+    transform: translateY(-2px);
+}
+
+.consultation-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.consultation-card:hover {
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+}
+
+/* Form elements */
+input, select {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #0EA5E9;
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.1);
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0EA5E9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284C7;
+}
+
+/* Tech icons hover effects */
+.tech-icons i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation link effects */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0EA5E9;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Process steps animation */
+.flex-shrink-0 {
+    transition: all 0.3s ease;
+}
+
+.flex-shrink-0:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Image hover effects */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+} 

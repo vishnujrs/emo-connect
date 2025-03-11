@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMO - Empowering Mobility & Opportunities</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="logo-container">
+                        <div class="flex items-center">
+                            <div class="logo-image w-12 h-12">
+                                <img src="emo.jpg" alt="EMO Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div class="ml-3">
+                                <span class="block text-lg font-bold text-blue-800">EMO</span>
+                                <span class="block text-xs text-gray-600">Empowering Mobility</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="#consultation" class="text-gray-700 hover:text-blue-600 transition-colors">Consultation</a>
+                    <a href="#technology" class="text-gray-700 hover:text-blue-600 transition-colors">Technology</a>
+                    <a href="#order" class="text-gray-700 hover:text-blue-600 transition-colors">Order</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-24 pb-20 bg-gradient-to-r from-blue-500 to-teal-500">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <div class="tech-icons mb-8 animate-fade-in">
+                    <i class="fas fa-robot text-4xl text-white mx-2 hover-grow"></i>
+                    <i class="fas fa-hand-holding-medical text-4xl text-white mx-2 hover-grow"></i>
+                    <i class="fas fa-microscope text-4xl text-white mx-2 hover-grow"></i>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                    Advanced Prosthetic Solutions
+                </h1>
+                <p class="text-xl text-white mb-8 animate-fade-in">
+                    Empowering lives with cutting-edge artificial limb technology and expert medical consultation
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="login.html" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 hover-grow shadow-lg">
+                        Book Consultation
+                    </a>
+                    <a href="#solutions" onclick="scrollToSolutions(event)" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 hover-grow">
+                        View Solutions
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">Prosthetic Solutions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md emotion-card transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showSolutionDetails('hand')">
+                        <div class="text-blue-500 text-3xl mb-4">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Advanced Hand Prosthetics</h3>
+                        <p class="text-gray-600">State-of-the-art artificial hands with precise motor control and natural movement</p>
+                        <ul class="mt-4 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Myoelectric Control</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Sensory Feedback</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Customizable Grip</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md emotion-card transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showSolutionDetails('leg')">
+                        <div class="text-blue-500 text-3xl mb-4">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Lower Limb Prosthetics</h3>
+                        <p class="text-gray-600">Advanced leg prosthetics designed for comfort, stability, and natural gait</p>
+                        <ul class="mt-4 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Dynamic Balance</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Adaptive Terrain</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Smart Joint System</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md emotion-card transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showSolutionDetails('custom')">
+                        <div class="text-blue-500 text-3xl mb-4">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Custom Solutions</h3>
+                        <p class="text-gray-600">Personalized prosthetic solutions tailored to your specific needs</p>
+                        <ul class="mt-4 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>3D Printed Custom Fit</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Activity-Specific Design</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Regular Adjustments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Details Modal -->
+        <div id="solutionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+                    <button onclick="closeSolutionModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+                <div class="mt-8 flex justify-end">
+                    <button onclick="closeSolutionModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Section -->
+        <section id="technology" class="py-20 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Advanced Technology</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="myoelectric.html" class="p-6 bg-white rounded-lg shadow-md tech-card block">
+                        <h3 class="text-xl font-semibold mb-4">Myoelectric Technology</h3>
+                        <img src="myoelectric.png" alt="Myoelectric Technology" class="w-full rounded-lg mb-4 h-48 object-cover">
+                        <p class="text-gray-600">Experience natural hand movements with our advanced myoelectric prosthetic system</p>
+                        <button class="mt-4 text-blue-600 hover:text-blue-700 font-semibold">Learn More →</button>
+                    </a>
+                    <a href="smart-adaptation.html" class="p-6 bg-white rounded-lg shadow-md tech-card block">
+                        <h3 class="text-xl font-semibold mb-4">Smart Adaptation System</h3>
+                        <img src="Screenshot 2025-03-10 232238.png" alt="Smart Adaptation System Interface" class="w-full rounded-lg mb-4 h-48 object-cover">
+                        <p class="text-gray-600">Advanced prosthetic system with customizable settings</p>
+                        <button class="mt-4 text-blue-600 hover:text-blue-700 font-semibold">Learn More →</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order & Delivery Section -->
+        <section id="order" class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Order Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Myoelectric Product Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="myoelectric.png" alt="Myoelectric Technology" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Myoelectric Prosthetic System</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-blue-600">₹15,999</span>
+                            <span class="ml-2 text-sm text-gray-500">Starting price</span>
+                        </div>
+                        <ul class="mb-6 text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Advanced muscle sensor technology
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Natural movement patterns
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Customizable grip settings
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-truck text-blue-500 mr-2"></i>
+                                Free shipping & professional fitting
+                            </li>
+                        </ul>
+                        <button onclick="window.location.href='order.html?type=myoelectric'" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Order Now
+                        </button>
+                    </div>
+
+                    <!-- Smart Adaptation Product Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="Screenshot 2025-03-10 232238.png" alt="Smart Adaptation System" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Smart Adaptation System</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-blue-600">₹20,999</span>
+                            <span class="ml-2 text-sm text-gray-500">Starting price</span>
+                        </div>
+                        <ul class="mb-6 text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Advanced prosthetic control
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Customizable settings
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Mobile app integration
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-truck text-blue-500 mr-2"></i>
+                                Free shipping & setup assistance
+                            </li>
+                        </ul>
+                        <button onclick="window.location.href='order.html?type=smart'" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Delivery Information -->
+                <div class="mt-12 bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold mb-6">Delivery & Support Information</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <i class="fas fa-shipping-fast text-4xl text-blue-600 mb-4"></i>
+                            <h4 class="font-semibold mb-2">Free Professional Delivery</h4>
+                            <p class="text-gray-600">Includes white-glove delivery service and initial setup</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-tools text-4xl text-blue-600 mb-4"></i>
+                            <h4 class="font-semibold mb-2">Expert Fitting & Setup</h4>
+                            <p class="text-gray-600">Professional fitting and customization included</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-headset text-4xl text-blue-600 mb-4"></i>
+                            <h4 class="font-semibold mb-2">24/7 Support</h4>
+                            <p class="text-gray-600">Lifetime technical support and maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Section -->
+        <section id="consultation" class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Expert Consultation</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-white rounded-lg shadow-md consultation-card">
+                        <h3 class="text-xl font-semibold mb-4">Schedule a Consultation</h3>
+                        <form action="login.html" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full p-2 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full p-2 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Type of Prosthetic</label>
+                                <select class="w-full p-2 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                    <option>Upper Limb Prosthetic</option>
+                                    <option>Lower Limb Prosthetic</option>
+                                    <option>Custom Solution</option>
+                                </select>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Request Appointment
+                            </button>
+                        </form>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-md consultation-card">
+                        <h3 class="text-xl font-semibold mb-4">Our Process</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">1</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Initial Consultation</h4>
+                                    <p class="text-gray-600">Meet with our experts to discuss your needs and goals</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">2</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Custom Assessment</h4>
+                                    <p class="text-gray-600">Detailed evaluation and measurements for perfect fit</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">3</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Solution Design</h4>
+                                    <p class="text-gray-600">Custom design and manufacturing of your prosthetic</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">4</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Fitting & Training</h4>
+                                    <p class="text-gray-600">Expert fitting and comprehensive usage training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8">Emergency Support Available 24/7</h2>
+                <div class="flex justify-center space-x-8">
+                    <div class="text-center">
+                        <i class="fas fa-phone-alt text-3xl text-blue-600 mb-4"></i>
+                        <p class="font-semibold">Emergency Hotline</p>
+                        <p class="text-gray-600">1-800-EMO-HELP</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-envelope text-3xl text-blue-600 mb-4"></i>
+                        <p class="font-semibold">Email Support</p>
+                        <p class="text-gray-600">support@emo-care.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-semibold mb-4">About EMO</h3>
+                    <p class="text-gray-400">Empowering lives through advanced prosthetic solutions and compassionate care.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Upper Limb Prosthetics</li>
+                        <li>Lower Limb Prosthetics</li>
+                        <li>Custom Solutions</li>
+                        <li>Technology</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>24/7 Emergency</li>
+                        <li>Maintenance</li>
+                        <li>Training</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 border-t border-gray-700 pt-8">
+                <p>&copy; 2024 EMO - Empowering Mobility & Opportunities. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSolutions(event) {
+            event.preventDefault();
+            document.getElementById('solutions').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function showSolutionDetails(type) {
+            const modal = document.getElementById('solutionModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+
+            const solutions = {
+                hand: {
+                    title: 'Advanced Hand Prosthetics',
+                    content: `
+                        <h4 class="text-xl font-semibold mb-4">Features & Benefits</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Myoelectric Control</span>
+                                    <p class="text-gray-600">Advanced muscle sensors for intuitive control and natural movement patterns</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Sensory Feedback</span>
+                                    <p class="text-gray-600">Real-time tactile feedback for improved grip control and object manipulation</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Customizable Grip Patterns</span>
+                                    <p class="text-gray-600">Multiple pre-programmed grip patterns for various daily activities</p>
+                                </div>
+                            </li>
+                        </ul>
+                    `
+                },
+                leg: {
+                    title: 'Lower Limb Prosthetics',
+                    content: `
+                        <h4 class="text-xl font-semibold mb-4">Features & Benefits</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Dynamic Balance System</span>
+                                    <p class="text-gray-600">Real-time adjustment for optimal stability during various activities</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Terrain Adaptation</span>
+                                    <p class="text-gray-600">Smart sensors that detect and adapt to different surface conditions</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Energy Return</span>
+                                    <p class="text-gray-600">Advanced materials that store and release energy for natural movement</p>
+                                </div>
+                            </li>
+                        </ul>
+                    `
+                },
+                custom: {
+                    title: 'Custom Solutions',
+                    content: `
+                        <h4 class="text-xl font-semibold mb-4">Features & Benefits</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">3D Printed Custom Fit</span>
+                                    <p class="text-gray-600">Precisely designed and manufactured to match your unique requirements</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Activity-Specific Design</span>
+                                    <p class="text-gray-600">Specialized solutions for sports, work, or specific activities</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Ongoing Support</span>
+                                    <p class="text-gray-600">Regular adjustments and modifications as needed</p>
+                                </div>
+                            </li>
+                        </ul>
+                    `
+                }
+            };
+
+            title.textContent = solutions[type].title;
+            content.innerHTML = solutions[type].content;
+            modal.classList.remove('hidden');
+        }
+
+        function closeSolutionModal() {
+            document.getElementById('solutionModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html> 

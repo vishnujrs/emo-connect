@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation - EMO</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="logo-container">
+                        <div class="flex items-center">
+                            <div class="logo-image w-12 h-12">
+                                <img src="emo.jpg" alt="EMO Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div class="ml-3">
+                                <span class="block text-lg font-bold text-blue-800">EMO</span>
+                                <span class="block text-xs text-gray-600">Empowering Mobility</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-center mb-8">Book Your Consultation</h2>
+                
+                <!-- Doctor Selection -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Select Doctor</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500">
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/100x100" alt="Dr. Smith" class="rounded-full w-16 h-16">
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Dr. Sarah Smith</h4>
+                                    <p class="text-gray-600">Prosthetic Specialist</p>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500">
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/100x100" alt="Dr. Johnson" class="rounded-full w-16 h-16">
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Dr. Michael Johnson</h4>
+                                    <p class="text-gray-600">Rehabilitation Expert</p>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date and Time Selection -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Select Date & Time</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Date</label>
+                            <input type="date" class="w-full p-3 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Preferred Time</label>
+                            <select class="w-full p-3 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                <option>09:00 AM</option>
+                                <option>10:00 AM</option>
+                                <option>11:00 AM</option>
+                                <option>02:00 PM</option>
+                                <option>03:00 PM</option>
+                                <option>04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Selection -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Select Location</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500">
+                            <h4 class="font-semibold">Main Clinic</h4>
+                            <p class="text-gray-600">123 Medical Center Drive</p>
+                            <p class="text-gray-600">India,IN 410001 </p>
+                        </div>
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500">
+                            <h4 class="font-semibold">Downtown Branch</h4>
+                            <p class="text-gray-600">456 Healthcare Avenue</p>
+                            <p class="text-gray-600">India,IN 410005</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultation Type -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Consultation Type</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500" onclick="selectConsultationType('inperson')" id="inperson-type">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-md text-2xl text-blue-500 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">In-Person Consultation</h4>
+                                    <p class="text-gray-600">Face-to-face meeting with doctor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-4 cursor-pointer hover:border-blue-500" onclick="selectConsultationType('video')" id="video-type">
+                            <div class="flex items-center">
+                                <i class="fas fa-video text-2xl text-blue-500 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Video Consultation</h4>
+                                    <p class="text-gray-600">Online video meeting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="video-notice" class="mt-4 text-blue-600 hidden">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        For video consultations, our team will call you to schedule the meeting time.
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="mb-8">
+                    <label class="block text-gray-700 mb-2">Additional Notes</label>
+                    <textarea class="w-full p-3 border rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500" rows="4" placeholder="Any specific concerns or requirements..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="submitBooking(event)" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Confirm Booking
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 EMO - Empowering Mobility & Opportunities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let selectedType = 'inperson';
+        const dateTimeSection = document.querySelector('.mb-8:nth-of-type(2)');
+        const locationSection = document.querySelector('.mb-8:nth-of-type(3)');
+
+        function selectConsultationType(type) {
+            selectedType = type;
+            const inPersonElement = document.getElementById('inperson-type');
+            const videoElement = document.getElementById('video-type');
+            const videoNotice = document.getElementById('video-notice');
+            
+            // Reset borders
+            inPersonElement.classList.remove('border-blue-500', 'border-2');
+            videoElement.classList.remove('border-blue-500', 'border-2');
+            
+            // Highlight selected type
+            if (type === 'inperson') {
+                inPersonElement.classList.add('border-blue-500', 'border-2');
+                videoElement.classList.add('border-gray-200');
+                dateTimeSection.classList.remove('hidden');
+                locationSection.classList.remove('hidden');
+                videoNotice.classList.add('hidden');
+            } else {
+                videoElement.classList.add('border-blue-500', 'border-2');
+                inPersonElement.classList.add('border-gray-200');
+                dateTimeSection.classList.add('hidden');
+                locationSection.classList.add('hidden');
+                videoNotice.classList.remove('hidden');
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+            
+            if (selectedType === 'video') {
+                window.location.href = 'confirmation.html?type=video';
+            } else {
+                window.location.href = 'confirmation.html?type=inperson';
+            }
+        }
+
+        // Initialize with in-person consultation selected
+        selectConsultationType('inperson');
+    </script>
+</body>
+</html> 
